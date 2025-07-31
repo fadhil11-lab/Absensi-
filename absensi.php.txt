@@ -1,0 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    echo "Harus login dulu.";
+    exit;
+}
+
+date_default_timezone_set('Asia/Jakarta');
+$status = $_POST['status'] ?? '';
+$nama = $_SESSION['username'];
+$waktu = date("Y-m-d H:i:s");
+
+$data = "$waktu | $nama | $status" . PHP_EOL;
+
+file_put_contents("data_absensi.txt", $data, FILE_APPEND);
+echo "Absensi berhasil dicatat!";

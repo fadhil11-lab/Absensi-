@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard Absensi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Form Absensi</h2>
+    <form id="absensiForm">
+      <label for="status">Status:</label>
+      <select id="status" name="status">
+        <option value="Check-in">Check-in</option>
+        <option value="Check-out">Check-out</option>
+      </select>
+
+      <button type="submit">Kirim</button>
+    </form>
+    <div id="message"></div>
+    <br/>
+    <a href="logout.php">Logout</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
